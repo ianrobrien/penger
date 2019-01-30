@@ -10,7 +10,7 @@ services:
       - "8181:8181"
       - "1521:1521"
     volumes:
-      - h2-data:/opt/h2-data
+      - ./.h2-data:/opt/h2-data
 
   backend:
     build:
