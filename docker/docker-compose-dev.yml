@@ -1,0 +1,25 @@
+version: "3.3"
+
+services:
+  h2:
+    build:
+      context: ./h2
+      dockerfile: docker-h2
+    hostname: 'h2'
+    ports:
+      - "8181:8181"
+      - "1521:1521"
+    volumes:
+      - h2-data:/opt/h2-data
+
+#  backend:
+#    ports:
+#      - "8080"
+#    environment:
+#      - DATASOURCE_URL=jdbc:h2:tcp://h2:1521/penger;INIT=CREATE SCHEMA IF NOT EXISTS penger;MODE=MSSQLServer
+#      - DATASOURCE_DRIVERCLASSNAME=org.h2.Driver
+#      - DATASOURCE_USERNAME=sa
+#      - DATASOURCE_PASSWORD=sa
+#
+volumes:
+    h2-data:
