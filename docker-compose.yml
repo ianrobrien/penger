@@ -23,7 +23,6 @@ services:
       - DATASOURCE_DRIVERCLASSNAME=org.h2.Driver
       - DATASOURCE_USERNAME=sa
       - DATASOURCE_PASSWORD=sa
-      - SPRING_PROFILES_ACTIVE=dev
 
 volumes:
-    h2-data:
+  h2-data:
