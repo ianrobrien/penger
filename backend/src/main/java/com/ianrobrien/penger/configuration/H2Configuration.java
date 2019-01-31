@@ -16,4 +16,9 @@ public class H2Configuration {
     return Server.createTcpServer().start();
   }
 
+  @Bean
+  public Server h2WebServer() throws SQLException {
+    return Server.createWebServer().start();
+  }
+
 }

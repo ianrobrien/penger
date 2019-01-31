@@ -17,11 +17,12 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     ports:
-      - "8080"
+      - "8080:8080"
     environment:
       - DATASOURCE_URL=jdbc:h2:tcp://h2:1521/penger;INIT=CREATE SCHEMA IF NOT EXISTS penger;MODE=MSSQLServer
       - DATASOURCE_DRIVERCLASSNAME=org.h2.Driver
       - DATASOURCE_USERNAME=sa
       - DATASOURCE_PASSWORD=sa
+
 volumes:
     h2-data:
