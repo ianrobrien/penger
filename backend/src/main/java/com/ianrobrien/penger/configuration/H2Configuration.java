@@ -18,7 +18,7 @@ public class H2Configuration {
 
   @Bean
   public Server h2WebServer() throws SQLException {
-    return Server.createWebServer("-webPort", "8181").start();
+    return Server.createWebServer().start();
   }
 
 }

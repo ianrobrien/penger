@@ -1,4 +1,7 @@
 spring:
+  datasource:
+    initialization-mode: always
+    platform: h2
   jpa:
     properties:
       hibernate:

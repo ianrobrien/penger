@@ -9,8 +9,8 @@ services:
     ports:
       - "8181:8181"
       - "1521:1521"
-    volumes:
-      - ./.h2-data:/opt/h2-data
+#    volumes:
+#      - ./.h2-data:/opt/h2-data
 
   backend:
     build:
@@ -24,5 +24,5 @@ services:
       - DATASOURCE_USERNAME=sa
       - DATASOURCE_PASSWORD=sa
 
-volumes:
-  h2-data:
+#volumes:
+#  h2-data:
